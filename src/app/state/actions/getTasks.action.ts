@@ -1,8 +1,8 @@
 import { Action } from '@ngrx/store';
  
 export enum ActionTypes {
-    GET_TASKS= '[Tasks Component] Load',
-    GET_TASKS_SUCCESS = '[Tasks Component] SUCCESS',
+  GET_TASKS = '[Tasks Component] Load',
+  GET_TASKS_SUCCESS = '[Tasks Component] SUCCESS',
 }
 
 export class GetTasks implements Action {

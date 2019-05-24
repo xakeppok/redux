@@ -1,11 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <section>
-    <div class="tasks">
-        <input type="text">
-        <div class="task" *ngFor="let a of tasks$ | async">
-           {{ a.name }}
-        </div>
+
+  <div class="tasks">
+    <form [formGroup]="taskForm">
+      <label>
+        Task Name:
+        <input type="text" formControlName="taskName">
+      </label>
+      <label>
+        Date:
+        <input type="text" formControlName="taskDate">
+      </label>
+      <button (click) = "putIntoTasks()"> dfsafds</button>
+    </form>
+    <div class="task" *ngFor="let a of tasks$ | async">
+      {{ a.taskName }} <button (click) = "deleteTask(a.id)">Delete</button>
     </div>
+  </div>
 </section>
 
 <router-outlet></router-outlet>

@@ -9,6 +9,7 @@ import { reducer } from './state/reducers/getTask.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { GetTask } from './state/effects/getTask.effect';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { GetTask } from './state/effects/getTask.effect';
     StoreModule.forRoot({ Tasks: reducer }),
     StoreDevtoolsModule.instrument({
     }),
-    EffectsModule.forRoot([GetTask])
+    EffectsModule.forRoot([GetTask]),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
